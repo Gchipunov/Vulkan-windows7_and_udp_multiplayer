@@ -1,0 +1,16 @@
+//Step 6: Create Shader Files
+
+//You need to provide the vertex and fragment shaders as SPIR-V files (vert.spv and frag.spv). Below are example GLSL shaders that you can compile to SPIR-V using a tool like glslangValidator.
+
+//Vertex Shader (shader.vert):
+
+#version 450
+layout(location = 0) in vec3 inPosition;
+layout(location = 1) in vec3 inColor;
+
+layout(location = 0) out vec3 fragColor;
+
+void main() {
+    gl_Position = vec4(inPosition, 1.0);
+    fragColor = inColor;
+}

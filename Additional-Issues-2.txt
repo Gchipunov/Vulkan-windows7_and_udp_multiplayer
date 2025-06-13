@@ -1,0 +1,7 @@
+
+//2. Command Pool Queue Family Index:
+//You hardcoded commandPoolCreateInfo.queueFamilyIndex = 0. This assumes queue family 0 supports graphics, which may not be true. Use the graphicsQueueFamilyIndex found in createDevice:
+
+
+
+commandPoolCreateInfo.queueFamilyIndex = graphicsQueueFamilyIndex; // From createDevice

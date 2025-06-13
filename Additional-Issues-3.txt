@@ -1,0 +1,13 @@
+// 3.Fence Usage:
+//You declare VkFence vVkFence but don’t initialize it, and you pass it to vkQueueSubmit. Create a fence to synchronize submission:
+
+VkFenceCreateInfo fenceInfo = {};
+fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+VkFence fence;
+vkCreateFence(device, &fenceInfo, nullptr, &fence);
+
+// In the main loop
+vkQueueSubmit(queue, 1, &submitInfo, fence);
+vkWaitForFences(device, 1, &fence, VK_TRUE, UINT64_MAX);
+vkResetFences(device, 1, &fence);
+

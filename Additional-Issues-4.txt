@@ -1,0 +1,7 @@
+
+// 4. Swapchain Image Acquisition:
+//Your main loop doesn’t acquire swapchain images before rendering. You need to use vkAcquireNextImageKHR to get the next image index and use the corresponding framebuffer.
+
+uint32_t imageIndex;
+vkAcquireNextImageKHR(device, swapchain, UINT64_MAX, VK_NULL_HANDLE, fence, &imageIndex);
+renderPassBeginInfo.framebuffer = framebuffers[imageIndex];

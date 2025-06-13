@@ -1,0 +1,32 @@
+Summary of Changes
+
+    Fixed Shader Module Errors:
+        Added vertShaderModule and fragShaderModule globals.
+        Implemented readShaderFile and createShaderModule to load and create shaders.
+        Provided example GLSL shaders and compilation instructions.
+    Improved Pipeline Creation:
+        Added proper vertex input state to match the Vertex structure.
+        Ensured shader stages are correctly set up.
+    Addressed Runtime Issues:
+        Added framebuffer creation.
+        Fixed command pool queue family index.
+        Added fence for synchronization.
+        Implemented swapchain image acquisition and presentation.
+        Added validation layers for debugging.
+        Included cleanup code.
+
+Next Steps
+
+    Create Shader Files:
+        Write and compile the vertex and fragment shaders as shown above.
+        Place vert.spv and frag.spv in a shaders directory.
+    Enable Validation Layers:
+        Install the Vulkan SDK and ensure validation layers are available.
+        Update createInstance to enable VK_LAYER_KHRONOS_validation.
+    Test the Application:
+        Build and run the application.
+        Use a debugger or validation layer output to catch any runtime errors.
+    Add Transformations:
+        To make the cube rotate or move, add a uniform buffer for a model-view-projection matrix and update the shaders to use it.
+
+If you encounter any further errors or need help with specific parts (e.g., shader compilation, uniform buffers), let me know!

@@ -1,0 +1,10 @@
+// 5. Validation Layers:
+//Your createInstance function doesn’t enable validation layers, which makes debugging harder. Add the VK_EXT_debug_utils extension and enable validation layers:
+
+
+const char* enabledLayers[] = {"VK_LAYER_KHRONOS_validation"};
+createInfo.enabledLayerCount = 1;
+createInfo.ppEnabledLayerNames = enabledLayers;
+
+
+

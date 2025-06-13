@@ -1,0 +1,17 @@
+//Step 4: Create Shaders Before Pipeline Creation
+
+// Before calling createPipeline, load and create the shader modules. Add this code in main or in a separate initialization function, before createPipeline:
+
+// Load and create vertex shader module
+std::vector<char> vertShaderCode = readShaderFile("shaders/vert.spv");
+if (createShaderModule(vertShaderCode, &vertShaderModule) != VK_SUCCESS) {
+    std::cerr << "Failed to create vertex shader module" << std::endl;
+    return -1;
+}
+
+// Load and create fragment shader module
+std::vector<char> fragShaderCode = readShaderFile("shaders/frag.spv");
+if (createShaderModule(fragShaderCode, &fragShaderModule) != VK_SUCCESS) {
+    std::cerr << "Failed to create fragment shader module" << std::endl;
+    return -1;
+}

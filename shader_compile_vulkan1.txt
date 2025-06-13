@@ -1,0 +1,14 @@
+glslc shader.vert -o vert.spv
+glslc shader.frag -o frag.spv
+
+C:\SourceTools\shaderc\install\install\bin\glslc shader.vert -o vert.spv
+
+C:\SourceTools\shaderc\install\install\bin\glslc shader.frag -o frag.spv
+
+cd C:\Users\Gosha\Documents\Visual Studio 2012\Projects\VulkanProject1\VulkanProject1\shader.frag
+
+cd C:\Users\Gosha\Documents\Visual Studio 2012\Projects\VulkanProject1\VulkanProject1\
+dir
+
+glslangValidator -V shader.vert -o vert.spv
+glslangValidator -V shader.frag -o frag.spv
